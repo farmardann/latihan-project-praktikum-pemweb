@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan Produk</title>
+    <link rel="stylesheet" href="latihan.css" />
+    <script src="latihan.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pemesanan Produk</h2>
+      <div class="input">
+        <label>Nama Produk</label>
+        <input type="text" id="produk" />
+      </div>
+      <div class="input">
+        <label>Jumlah</label>
+        <input type="number" id="jumlah" />
+      </div>
+      <div class="input">
+        <label>Harga Satuan (Rp)</label>
+        <input type="number" id="harga" />
+      </div>
+      <button onclick="proses()">Hitung Total</button>
+      <button onclick="hapus()">Hapus</button>
+
+      <div id="hasil"></div>
+    </div>
+  </body>
+</html>
