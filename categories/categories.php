@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catshop Admin | Categories Entry</title>
+    <title>Catshop Admin | Categories</title>
   </head>
 
   <body>
@@ -21,25 +21,25 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="../admin.html" class="active">
+          <a href="../admin.php" class="active">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="../categories/categories.html">
+          <a href="../categories/categories.php">
             <i class="bx bx-box"></i>
             <span class="links_name">Categories</span>
           </a>
         </li>
         <li>
-          <a href="../transaction/transaction.html">
+          <a href="../transaction/transaction.php">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Transaction</span>
           </a>
         </li>
         <li>
-          <a href="../index.html">
+          <a href="../index.php">
             <i class="bx bx-log-out"></i>
             <span class="links_name">Log out</span>
           </a>
@@ -56,45 +56,39 @@
         </div>
       </nav>
       <div class="home-content">
-        <h3>Input Categories</h3>
-        <div class="form-login">
-          <form action="">
-            <label for="categories">Categories</label>
-            <input
-              class="input"
-              type="text"
-              name="categories"
-              id="categories"
-              placeholder="Categories"
-            />
-            <label for="categories">Price</label>
-            <input
-              class="input"
-              type="text"
-              name="price"
-              id="price"
-              placeholder="Price"
-            />
-            <label for="categories">Description</label>
-            <input
-              class="input"
-              type="text"
-              name="Description"
-              id="Description"
-              placeholder="Description"
-            />
-            <label for="photo">Photo</label>
-            <input
-              type="file"
-              name="photo"
-              id="photo"
-              style="margin-bottom: 20px"
-            />
-            <button type="submit" class="btn btn-simpan" name="simpan">
-              Simpan
-            </button>
-          </form>
-        </div>
+        <h3>Categories</h3>
+        <button type="button" class="btn btn-tambah">
+          <a href="categories-entry.php">Tambah Data</a>
+        </button>
+        <table class="table-data">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 20%">Photo</th>
+              <th>Categories</th>
+              <th scope="col" style="width: 20%">Description</th>
+              <th scope="col" style="width: 15%">Price</th>
+              <th scope="col" style="width: 30%">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../assets/anggora.png" alt="" /></td>
+              <td>Anggora</td>
+              <td>
+                Anggora turki adalah salah satu ras kucing domestik alami
+                tertua. Ras ini berasal dari Ankara, Turki. Kucing ini sangat
+                populer dan terkenal di Indonesia.
+              </td>
+              <td>450,000</td>
+              <td>
+                <button class="btn-edit" onclick="editCategory()">Edit</button>
+                <button class="btn-delete" onclick="deleteCategory()">
+                  Hapus
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <script>
